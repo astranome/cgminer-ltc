@@ -7,7 +7,7 @@
 
 #define GPIO_DEVICE_TEMPLATE    "/sys/class/gpio/gpio%d/value"
 #define TTY_DEVICE_TEMPLATE     "/dev/ttyO%d"
-#define PWM_CTRL_TEMPLATE       "echo %u > /sys/class/pwm/pwm1/duty_ns"
+#define PWM_CTRL_TEMPLATE       "echo %u > /sys/class/pwm/pwm1/duty_ns" ///!!!!!!!!!________-----=========
 #define GPIO_SPEED_TEMPLATE     GPIO_DEVICE_TEMPLATE
 #define LED_CTRL_TEMPLATE       "echo %d > /sys/class/gpio/gpio%d/value"
 #define BEEP_CTRL_TEMPLATE      LED_CTRL_TEMPLATE
@@ -233,7 +233,7 @@ union REG_DATA
 #define CHECK_SYSTEM_TIME_GAP           10000           // 10s
 //fan
 #define PWM_PERIOD_NS                   100000
-#define MIN_FAN_NUM                     1
+#define MIN_FAN_NUM                     0
 #define MAX_FAN_SPEED                   4100
 #define MIN_PWM_PERCENT                 20
 #define MAX_PWM_PERCENT                 100
@@ -247,9 +247,9 @@ union REG_DATA
 #define FAN_SPEED_OK_PERCENT            (0.85)
 
 #ifdef L3
-#define CHAIN_ASIC_NUM                  36
-#define HAVE_TEMP                       0xe7
-#define HAVE_TEMP_2                     0xa8
+#define CHAIN_ASIC_NUM                  72
+#define HAVE_TEMP                       0xc
+#define HAVE_TEMP_2                     0xc9
 #define HAVE_TEMP_3                     0x69
 #define BITMAIN_REAL_TEMP_CHIP_NUM 1
 #else
@@ -257,9 +257,9 @@ union REG_DATA
 #define HAVE_TEMP                       0xc
 #define HAVE_TEMP_2                     0xc9
 #define HAVE_TEMP_3                     0x69
-#define BITMAIN_REAL_TEMP_CHIP_NUM 2
+#define BITMAIN_REAL_TEMP_CHIP_NUM 1
 #endif
-#define BITMAIN_MAX_TEMP_CHIP_NUM 3 // Each Chain
+#define BITMAIN_MAX_TEMP_CHIP_NUM 1 // Each Chain
 
 
 
