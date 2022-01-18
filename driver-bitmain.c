@@ -32,7 +32,7 @@
 
 #include "elist.h"
 #include "miner.h"
-#include "usbutils.h"
+//#include "usbutils.h"
 #include "driver-bitmain.h"
 #include "hexdump.c"
 #include "util.h"
