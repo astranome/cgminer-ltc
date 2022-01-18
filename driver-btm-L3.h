@@ -11,7 +11,7 @@
 #define GPIO_SPEED_TEMPLATE     GPIO_DEVICE_TEMPLATE
 #define LED_CTRL_TEMPLATE       "echo %d > /sys/class/gpio/gpio%d/value"
 #define BEEP_CTRL_TEMPLATE      LED_CTRL_TEMPLATE
-#define IIC_DEVIVEE             "/dev/i2c-0"
+#define IIC_DEVIVEE             "/dev/i2c-2"
 
 #define FPGA_SOURCE
 
@@ -529,7 +529,7 @@ struct work_ltc
     //uint8_t chainid;
 
     uint8_t type;       //Bit[7:5]: Type,fixed as 0x01. Bit[4:1]:Reserved   Bit[0]:start nonce valid
-    uint8_t length;     //data length£¬from Byte0 to the end,whitout crc bytes.
+    uint8_t length;     //data lengthÂ£Â¬from Byte0 to the end,whitout crc bytes.
     uint8_t wc_base;    // Bit[7]: Reserved.   Bit[6:0]: Work count base
     uint8_t reserved;
     //uint32_t sno;     // StartNonce
